@@ -1,0 +1,6 @@
+rsync -avz -e ssh /P1/var/www/ /var/www
+4) keygen 
+	ssh-keygen -t dsa
+	ssh-copy-id -i ~/.ssh/id_dsa.pub P1
+5)crontab
+	/etc/crontab -> añadir linea * * * * * root rsync ...
