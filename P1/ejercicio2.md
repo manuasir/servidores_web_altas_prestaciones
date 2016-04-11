@@ -1,4 +1,4 @@
-
+#ps aux | grep apache
 
 root      69024  0.1  2.5 361496 25124 ?        Ss   18:33   0:00 /usr/sbin/apache2 -k start
 
