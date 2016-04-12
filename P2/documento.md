@@ -3,11 +3,11 @@
 Se instalaron tres servidores Ubuntu Server en máquinas virtuales en VMWare Workstation, de los cuales uno tendrá funciones de balanceo de carga. Los servidores pertenecen a un segmento de red virtual privada además de una red externa para administración.
 
 La configuración que se les asignó a los servidores es la siguiente:
--512 MB de memoria RAM
--1 procesador multithread con 2 hebras
--20 GB de almacenamiento 
+- 512 MB de memoria RAM
+- 1 procesador multithread con 2 hebras
+- 20 GB de almacenamiento 
 - Sistema operativo Ubuntu Server 14.04 x64
--Dos tarjetas de red por cada servidor Fast Ethernet
+- Dos tarjetas de red por cada servidor Fast Ethernet
 
 Para la configuración de la red se creó un segmento de red en VMware al que se conectaron los tres servidores.
 La red asignada a éste segmento es la 172.16.0.0/24.
