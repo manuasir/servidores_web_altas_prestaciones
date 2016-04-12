@@ -14,5 +14,20 @@ La red asignada a éste segmento es la 172.16.0.0/24.
 
 Por otra parte en la segunda tarjeta de red de cada uno se le configuró conectividad Bridge para la red de administración y poder acceder remotamente a cada uno de ellos vía SSH. Ésta red cuenta con un servidor DHCP que asigna direcciones dinámicas a cada interfaz de red, en éste caso en la red 192.168.0.0/24.
 
-Una vez que se haya comprobado la conectividad entre las máquinas, procedemos a realizar la generación de claves públicas y privadas
+Una vez que se haya comprobado la conectividad entre las máquinas, procedemos a realizar la generación de claves públicas y privadas y habilitar el acceso SSH para root en cada máquina. En primer lugar se modifica el fichero /etc/ssh/sshd_config en la máquina principal para habilitar la linea PermitRootLogin a 'yes' y así permitir que el usuario root pueda conectarse remotamente.
+El siguiente paso es generar claves públicas y privadas en el servidor secundario para permitir la sincronización de archivos mediante scripts sin que pida la contraseña.
 
+(foto)
+
+Una vez creadas las credenciales, hemos de añadir la pública en el servidor principal para que 'conozca' al otro servidor.
+
+(foto)
+
+Finalizado éste punto ya es posible acceder al servidor principal sin necesidad de contraseña, a continuación se creará un script que se ejecutará de forma programada y en el que se automatizará la clonación del espacio del servidor web de una máquina a la otra.
+Para ello se creó un script en la máquina secundaria llamado 'actualizar.sh' en el cual se ejecuta el comando rsync mencionado anteriormente, la intención es que el script se ejecute una vez cada hora. Por tanto se ha de modificar el fichero de configuración de 'cron' sito en /etc/crontab
+
+Para comprobar la funcionalidad, eliminamos a propósito el directorio /var/www en el servidor secundario, y modificamos /etc/crontab de la siguiente manera
+
+(foto)
+
+Comprobamos que pasado el tiempo el directorio /var/www vuelve a existir.
