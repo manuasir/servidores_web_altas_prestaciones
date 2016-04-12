@@ -48,7 +48,7 @@ Adicionalmente se instalará el software Varnish para el balanceo de la carga, p
 
 Y luego configuramos el servicio de la siguiente manera en el fichero de configuración /etc/varnish/default.cfg
 
-(p3-8.jpg)
+![Alt text](p3-8.JPG?raw=true)
 
 Reiniciamos el servicio:
 
@@ -56,5 +56,4 @@ Reiniciamos el servicio:
 
 Y comprobamos cómo nos dirige alternativamente al cluster web. Por defecto este servicio utiliza el puerto 6081, ésto se puede modificar en el fichero de documentación localizado en /etc/default/varnish
 
-(p3-10.jpg)
-(p3-11.jpg)
+
