@@ -23,24 +23,24 @@ Como siempre, el primer paso antes de modificar ficheros de configuración es re
 
 Eliminamos todo el contenido del fichero para crear nuestra propia configuración, la cual quedó de la siguiente manera
 
-(p3-2.jpg)
+![Alt text](p3-2.JPG?raw=true)
 
 Tras reiniciar el servicio de nginx procedemos a realizar una petición desde un navegador a la IP del balanceador, comprobando que resulta exitosa.
 En cada petición debe alternarse el servidor al que se apunta al haber configurado el algoritmo round-robin con un sistema de prioridades basado en un parámetro de peso en el balanceador. Para comprobar ésto, antes de que se sincronice el espacio web en los servidores de la granja, realizamos modificaciones en los HTML que se sirven para comprobar a qué máquina se está apuntando.
 Comprobamos con éxito que el balanceador muestra el HTML modificado correspondiente al primer servidor dos de cada tres peticiones como está configurado.
 
-(p3-4.jpg)
-(p3-5.jpg)
+![Alt text](p3-3.JPG?raw=true)
+![Alt text](p3-4.JPG?raw=true)
 
 El siguiente paso es instalar y configurar el software haproxy. Procedemos por el mismo procedimiento modificando el fichero de configuración una vez instalado /etc/haproxy/haproxy.cfg, no sin antes realizarle una copia de seguridad.
 
-(p3-5.jpg)
+![Alt text](p3-5.JPG?raw=true)
 
 Como el servicio nginx sigue en funcionamiento en nuestra máquina escuchando en el puerto 80, para iniciar el servicio haproxy podemos o parar el servicio nginx para que haproxy use el puerto 80 o configurarlo para que use un puerto diferente, en éste caso el puerto 8080.
 Reiniciamos el servicio y comprobamos el balanceo:
 
-(p3-6.jpg)
-(p3-7.jpg)
+![Alt text](p3-6.JPG?raw=true)
+![Alt text](p3-7.JPG?raw=true)
 
 Comprobamos con éxito que el balanceo se realiza adecuadamente.
 Adicionalmente se instalará el software Varnish para el balanceo de la carga, para ello:
