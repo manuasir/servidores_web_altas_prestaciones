@@ -17,7 +17,7 @@ Por otra parte en la segunda tarjeta de red de cada uno se le configuró conecti
 Una vez que se haya comprobado la conectividad entre las máquinas, procedemos a realizar la generación de claves públicas y privadas y habilitar el acceso SSH para root en cada máquina. En primer lugar se modifica el fichero /etc/ssh/sshd_config en la máquina principal para habilitar la linea PermitRootLogin a 'yes' y así permitir que el usuario root pueda conectarse remotamente.
 El siguiente paso es generar claves públicas y privadas en el servidor secundario para permitir la sincronización de archivos mediante scripts sin que pida la contraseña.
 
-(foto)
+![Alt text](p2-5.jpg?raw=true "Optional Title")
 
 Una vez creadas las credenciales, hemos de añadir la pública en el servidor principal para que 'conozca' al otro servidor.
 
