@@ -4,7 +4,7 @@ Para ésta práctica se va a realizar la configuración del servidor que realiza
 
 Para instalar el software en primer lugar se ha de descargar y añadir la clave del repositorio:
 
-(p3-1.jpg)
+![Alt text](p3-1.JPG?raw=true)
 
 El siguiente paso es añadir el repositorio a la lista de repositorios del sistema 
 
