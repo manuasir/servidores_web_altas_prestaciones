@@ -57,5 +57,7 @@ Tras realizar el comando SHOW SLAVE STATUS\G; debemos apreciar la información de
 
 ![Alt text](c3.PNG?raw=true)
 
+
 Como última comprobación añadiremos nuevos datos en el maestro, comprobando que satisfactoriamente se replican en el esclavo de inmediato.
 
+![Alt text](c4.PNG?raw=true)
