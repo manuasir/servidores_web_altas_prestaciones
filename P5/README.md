@@ -5,21 +5,21 @@ Para ello en primer lugar hay que proceder a instalar Mysql, para ésta instancia
 En primer lugar se creó una base de datos llamada 'contactos' , la cual almacenará una tabla con dos campos, nombre y teléfono.
 Insertaremos algunos registros en ella:
 
-##mysql>  insert into datos(nombre,tlf) values ("manu",660773539);
-##Query OK, 0 rows affected (0,01 sec)
+	mysql>  insert into datos(nombre,tlf) values ("manu",660773539);
+	Query OK, 0 rows affected (0,01 sec)
 
 La primera configuración que se realizará será un duplicado manual de ésta con la herramienta mysqldump
 
-##root@1server:~#mysqldump contactos -u root -p > /root/contactos.sql
+	root@1server:~#mysqldump contactos -u root -p > /root/contactos.sql
 
 De ésta forma obtenemos la base de datos en un fichero de texto lista para ser importada manualmente en el servidor de copias.
 Para ello basta con el comando "secure copy" (scp):
 
-##swap@2server:~$ sudo scp swap@maquina1:/root/contactos.sql /root/
+	swap@2server:~$ sudo scp swap@maquina1:/root/contactos.sql /root/
 
 Una vez contamos con el volcado de la base de datos, se ha de crear la base de datos que contendrá la réplica:
 
-#mysql -u root -p contactos < /root/contactos.sql
+	mysql -u root -p contactos < /root/contactos.sql
 
 Con un simple "select * from datos" se puede comprobar que la información que se refleja es la misma en ambas bases de datos.
 Ya que ésta no es la manera más óptima de proceder, se debe automatizar el proceso. Para ello haremos uso de los mecanimos que nos provee Mysql.
