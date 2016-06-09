@@ -59,8 +59,8 @@ Ejecuciones de Siege sobre el balanceador NGINX:
 
 Ejecuciones de Siege sobre el balanceador VARNISH:
 
-![Alt text](c.PNG?raw=true)
+![Alt text](c5.PNG?raw=true)
 
 Ejecuciones de Siege sobre la maquina 1:
 
-![Alt text](c.PNG?raw=true)
+![Alt text](c6.PNG?raw=true)
