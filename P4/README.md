@@ -51,7 +51,7 @@ Ejecuciones de AB sobre el servidor 1:
 
 ![Alt text](c3.PNG?raw=true)
 
-# Para la aplicación siegue se utilizó 15 segundos como parámetro
+## Para la aplicación siegue se utilizó 15 segundos como parámetro
 
 Ejecuciones de Siege sobre el balanceador NGINX:
 
