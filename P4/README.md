@@ -1,4 +1,4 @@
-#Practica 4
+#Práctica 4
 
 
 En ésta práctica vamos a comprobar el rendimiento de nuestros servidores web, para ello vamos a hacer distintas pruebas con diferentes benchmark para contrastar los resultados.
@@ -55,12 +55,12 @@ Ejecuciones de AB sobre el servidor 1:
 
 Ejecuciones de Siege sobre el balanceador NGINX:
 
-![Alt text](c3.PNG?raw=true)
+![Alt text](c4.PNG?raw=true)
 
 Ejecuciones de Siege sobre el balanceador VARNISH:
 
-![Alt text](c3.PNG?raw=true)
+![Alt text](c.PNG?raw=true)
 
 Ejecuciones de Siege sobre la maquina 1:
 
-![Alt text](c3.PNG?raw=true)
+![Alt text](c.PNG?raw=true)
