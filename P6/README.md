@@ -48,3 +48,5 @@ Como se aprecia en las capturas de pantalla, al añadir el nuevo disco y consulta
 ésto es porque la información entre ambos está siendo sincronizada. Tras aguardar unos segundos se comprueba que la sincronización se realizó 
 satisfactoriamente y comprobamos que el estado de ambos discos es 'active sync'. 
 Si tras ésto accedemos a nuestro punto de montaje y comprobamos que la información permanece tal cual la creamos, la configuración se realizó con éxito.
+
+![Alt text](c10.PNG?raw=true)
